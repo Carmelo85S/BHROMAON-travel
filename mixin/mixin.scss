@@ -11,6 +11,15 @@
     text-align: center;
 }
 
+@mixin h3{
+    font-family: font.$josefin-sans;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 26px;
+    letter-spacing: 2.4px;
+    color:color.$white;
+}
+
 @mixin container ($justify-content: center, $align-items: center, $flex-direction: row, $flex-wrap: wrap){
     display:flex;
     justify-content: $justify-content;

@@ -12,6 +12,8 @@ header{
     background-size: cover;
     display:flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
     .wrapper{
         max-width: 653px;
@@ -96,6 +98,45 @@ header{
 
                 .fa-solid{
                     color:color.$white;
+                }
+            }
+        }
+    }
+
+    .navigation-background{
+        background-color: color.$navbar;
+        max-width: 100%;
+        min-height: 80px;
+        width: 100%;
+
+        .navigation-bar{
+            max-width: 1120px;
+            min-height: 20px;
+            width: 100%;
+            margin:auto;
+            @include container(space-between, center, row, nowrap);
+        }
+
+        .logo{
+            h3{
+                @include h3;
+            }
+        }
+
+        .list{
+            display: flex;
+            gap:20px;
+            list-style: none;
+
+            .link{
+                text-decoration: none;
+                color:color.$white;
+                font-style: font.$aleo;
+                font-size:15px;
+                line-height:26px;
+
+                &:hover{
+                    color: color.$link-hover;
                 }
             }
         }

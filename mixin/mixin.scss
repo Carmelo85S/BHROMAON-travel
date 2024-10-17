@@ -11,6 +11,13 @@
     text-align: center;
 }
 
+@mixin h2{
+    font-family: font.$aleo;
+    font-size: 36px;
+    line-height: 26px;
+    color: color.$white;
+}
+
 @mixin h3{
     font-family: font.$josefin-sans;
     font-weight: bold;
@@ -26,5 +33,35 @@
     align-items: $align-items;
     flex-direction: $flex-direction;
     flex-wrap: $flex-wrap;
+}
+
+@mixin p{
+    font-family: font.$josefin-sans;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 1.6px;
+    color:color.$paragraph;
+}
+
+@mixin btn{
+    max-width: 228px;
+    min-height: 63px;
+    width: 100%;
+    border:none;
+    background-color: color.$btn;
+    color: color.$white;
+    font-family: font.$josefin-sans;
+    font-size:16px;
+    line-height: 26px;
+    letter-spacing:1.6px;
+    transition: all 0.3s ease-in-out;
+
+    &:hover{
+        background-color: color.$btn-hover;
+    }
+
+    &:active{
+        background-color: color.$btn-active;
+    }
 }
 

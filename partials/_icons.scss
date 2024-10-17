@@ -1,0 +1,41 @@
+@use '../variables/color';
+@use '../variables/font';
+@import '../mixin/mixin.scss';
+
+.icons-background{
+    max-width: 100vw;
+    min-height: 340px;
+    width: 100%;
+    background-color: color.$icons-bg;
+    display: flex;
+
+    .content{
+        max-width: 1046px;
+        min-height: 176px;
+        width: 100%;
+        margin: auto;
+        @include container(space-between, center, row, wrap);
+
+        .card{
+            @include container(space-around, center, column, nowrap);
+            
+            .fa-solid, 
+            .fa-regular{
+                font-size: 60px;
+            }
+
+            .blue{
+                color: blue;
+            }
+
+            .red{
+                color:red;
+            }
+
+            &-text{
+                @include h2;
+            }
+        }
+
+    }
+}

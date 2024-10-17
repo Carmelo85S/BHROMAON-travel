@@ -1,0 +1,21 @@
+@use '../variables/font';
+@use '../variables/color';
+
+@mixin h1{
+    font-family: font.$josefin-sans;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 26px;
+    letter-spacing: 4.8px;
+    color:color.$white;
+    text-align: center;
+}
+
+@mixin container ($justify-content: center, $align-items: center, $flex-direction: row, $flex-wrap: wrap){
+    display:flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    flex-direction: $flex-direction;
+    flex-wrap: $flex-wrap;
+}
+

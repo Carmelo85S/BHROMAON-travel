@@ -1,0 +1,103 @@
+@use '../variables/color';
+@use '../variables/font';
+@import '../mixin/mixin.scss';
+
+header{
+    max-width: 100vw;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(../image/header-bg-l.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display:flex;
+    justify-content: center;
+
+    .wrapper{
+        max-width: 653px;
+        min-height: 100vh;
+        width: 100%;
+        @include container(center, center, column, nowrap);
+
+        .content__container{
+            max-width: 653px;
+            min-height: 341px;
+            width: 100%;
+            @include container(space-between, center, column, nowrap);
+
+            &-logo{
+                max-width: 372px;
+                min-height: 76px;
+                width: 100%;
+
+                .logo{
+                    @include h1;
+                }
+
+                .quote{
+                    font-family: font.$josefin-sans;
+                    font-size:22px;
+                    line-height: 26px;
+                    letter-spacing: 6.82px;
+                    text-align: center;
+                    color:color.$white;
+                }
+            }
+
+            .search-bar{
+                max-width: 653px;
+                width: 100%;
+                min-height: 63px;
+                @include container(center,center,row,nowrap);
+
+                input{
+                    max-width: 500px;
+                    min-height: 60px;
+                    width: 100%;
+                    text-align: center;
+                    font-family: font.$josefin-sans;
+                    font-size:14px;
+                    line-height: 26px;
+                    letter-spacing: 2.8px;
+                    color:color.$input-txt;
+                }
+
+                .btn{
+                    max-width: 150px;
+                    min-height: 65px;
+                    width: 100%;
+                    background-color:color.$btn;
+                    color:color.$white;
+                    border: 1px solid white;
+                    transition: 0.3s ease-in-out;
+
+                    &:hover{
+                        background-color: color.$btn-hover;
+                    }
+
+                    &:active{
+                        background-color: color.$btn-active;
+                    }
+                }
+            }
+            .cta{
+                max-width: 108px;
+                width: 100%;
+                min-height: 46px;
+                @include container(space-between, center,column, nowrap);
+
+                &-text{
+                    color:color.$white;
+                    font-family: font.$josefin-sans;
+                    font-size: 14px;
+                    line-height: 26px;
+                    letter-spacing: 2.8px
+                }
+
+                .fa-solid{
+                    color:color.$white;
+                }
+            }
+        }
+    }
+}

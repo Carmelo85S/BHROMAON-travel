@@ -1,0 +1,64 @@
+@use '../variables/color';
+@use '../variables/font';
+@import '../mixin/mixin.scss';
+
+.house-background{
+    max-width: 100vw;
+    min-height: 700px;
+    width: 100%;
+    background-image: url(../image/spain-house-bg-l.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+
+
+    .content-container{
+        max-width: 1120px;
+        min-height: 600px;
+        width: 100%;
+        display: flex;
+        margin: auto;
+
+        .box{
+            max-width: 543px;
+            min-height: 374px;
+            width: 100%;
+            align-self: flex-end;
+            background-color: color.$box;
+            margin-left: 30px;
+            margin-bottom:30px;
+
+            .content{
+                max-width: 488px;
+                min-height: 275px;
+                width: 100%;
+                margin: auto;
+                @include container(space-between, flex-start, column, nowrap);
+
+                .location{
+                    font-family: font.$josefin-sans;
+                    font-size: 20px;
+                    line-height: 26px;
+                    letter-spacing: 1.5px;
+                    color:color.$paragraph;
+                }
+
+                .heading{
+                    font-family: font.$josefin-sans;
+                    font-size: 20px;
+                    line-height: 26px;
+                    color:color.$white;
+                }
+
+                .info{
+                    @include p;
+                }
+
+                .cta{
+                    @include btn;
+                }
+            }
+        }
+    }
+}

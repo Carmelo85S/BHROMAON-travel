@@ -1,7 +1,13 @@
-@import '../partials/header';
-@import '../partials/why-choose-us';
-@import '../partials/icons';
-@import '../partials/house';
-@import '../partials/panorama';
-@import '../partials/testimonial';
-@import '../partials/footer';
+@import '../style/partials/header';
+@import '../style/partials/why-choose-us';
+@import '../style/partials/icons';
+@import '../style/partials/house';
+@import '../style/partials/panorama';
+@import '../style/partials/testimonial';
+@import '../style/partials/footer';
+
+body{
+    max-width: 1700px;
+    width: 100%;
+    margin:auto;
+}

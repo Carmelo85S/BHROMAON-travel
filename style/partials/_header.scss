@@ -34,6 +34,9 @@ header{
 
                 .logo{
                     @include h1;
+                    font-size: 28px;
+                    line-height: 26px;
+                    letter-spacing: 4.8px;
                 }
 
                 .quote{
@@ -91,7 +94,8 @@ header{
                     font-family: font.$josefin-sans;
                     font-size: 14px;
                     line-height: 26px;
-                    letter-spacing: 2.8px
+                    letter-spacing: 2.8px;
+                    text-align: center;
                 }
 
                 .fa-solid{
@@ -138,6 +142,12 @@ header{
                     color: color.$link-hover;
                 }
             }
+        }
+
+        .menu{
+            font-size:30px;
+            color:color.$white;
+            display: none;
         }
     }
 }
